@@ -32,6 +32,6 @@ public class Customer {
     }
     
     public String displayProfile() {
-        System.out.println("Customer ID: " + this.customerID + " | Nama: " + this.fullName + " | Email: " + this.email);
+        return ("Customer ID: " + this.customerID + " | Nama: " + this.fullName + " | Email: " + this.email);
     }
 }
