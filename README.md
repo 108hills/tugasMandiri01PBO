@@ -1,10 +1,5 @@
 # Secure Bank Account System
-
-## Deskripsi Sistem
-Sistem perbankan ini dipecah menjadi empat komponen utama yang berfokus pada implementasi enkapsulasi dan integritas data. Class `BankAccount` bertindak sebagai inti logika finansial dengan menyembunyikan atribut `accountNumber` dan `balance`, serta menerapkan validasi ketat pada konstruktor untuk mencegah saldo awal negatif, memastikan nominal setoran lebih dari nol, dan memblokir penarikan yang melebihi ketersediaan dana. Untuk manajemen identitas, class `Customer` mengisolasi atribut `customerID`, `fullName`, dan `email` secara privat, di mana pembaruan data hanya diizinkan melalui method yang memverifikasi keberadaan karakter `@` dan `.` pada format string. Sebagai lapisan deteksi anomali, class `SecurityAudit` melindungi aliran transaksi dengan menyembunyikan batas ambang wajar pada atribut `maxTransactionLimit`, sehingga setiap mutasi yang melampaui batas tersebut akan secara otomatis memicu peringatan dan mengubah flag `suspiciousActivity` untuk menahan eksekusi. Seluruh interaksi objek ini dikendalikan oleh class `BankMain` sebagai driver utama, yang menyediakan antarmuka Command Line Interface (CLI) interaktif menggunakan `Scanner` dan perulangan `while(true)` dengan `switch-case` agar pengguna dapat menguji ketahanan enkapsulasi serta logika keamanan sistem secara dinamis melalui terminal.
-
 ## Penjelasan Desain Class
-
 Sistem ini dirancang untuk mendemonstrasikan prinsip OOP *Encapsulation* secara nyata. Berikut adalah penjelasan struktur dari setiap class:
 
 ### 1. `BankAccount.java`
