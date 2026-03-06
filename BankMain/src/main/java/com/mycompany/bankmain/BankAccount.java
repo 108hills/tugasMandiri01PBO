@@ -33,7 +33,7 @@ public class BankAccount {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            System.out.println("Berhasil. Deposit:" + amount);
+            System.out.println("Berhasil. Deposit: $" + amount);
         } else {
             System.out.println("Deposit gagal. Nominal harus lebih dari 0.");
         }
@@ -43,10 +43,10 @@ public class BankAccount {
         if (amount <= 0) {
             System.out.println("Withdraw gagal. Nominal harus lebih dari 0.");
         } else if (amount > this.balance) {
-            System.out.println("Withdraw gagal. Nominal harus kurang dari/sama dengan Balance. Balance:" + this.balance);
+            System.out.println("Withdraw gagal. Nominal harus kurang dari/sama dengan Balance. Balance: $" + this.balance);
         } else {
             this.balance -= amount;
-            System.out.println("Withdraw" + amount + " berhasil.");
+            System.out.println("Withdraw $" + amount + " berhasil.");
         }
     }
 }
