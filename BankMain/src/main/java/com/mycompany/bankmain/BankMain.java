@@ -34,7 +34,7 @@ public class BankMain {
             switch (opsi) {
                 case 1 -> {
                     System.out.println("\n--- Profil Nasabah ---");
-                    nasabah.displayProfile();
+                    System.out.println(nasabah.displayProfile());
                     System.out.println("Nomor Rekening: " + akun.getAccNumber());
                     System.out.println("Saldo Saat Ini: $" + akun.getBal());
                 }
